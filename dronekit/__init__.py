@@ -51,7 +51,7 @@ import monotonic
 from past.builtins import basestring
 
 from pymavlink import mavutil, mavwp
-from pymavlink.dialects.v10 import ardupilotmega
+from pymavlink.dialects.v20 import common
 
 from dronekit.util import ErrprinterHandler
 
@@ -242,7 +242,7 @@ class Wind(object):
         self.wind_direction = wind_direction
         self.wind_speed = wind_speed
         self.wind_speed_z = wind_speed_z
-    
+
     def __str__(self):
         return "Wind: wind direction: {}, wind speed: {}, wind speed z: {}".format(self.wind_direction, self.wind_speed, self.wind_speed_z)
 
